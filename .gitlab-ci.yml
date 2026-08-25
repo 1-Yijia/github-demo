@@ -1,0 +1,10 @@
+pages:
+  stage: deploy
+  script:
+    - echo "Publishing static site to GitLab Pages"
+  artifacts:
+    paths:
+      - public
+  pages: true
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
